@@ -1,0 +1,231 @@
+<html>
+<head>
+	<title>Ping Pong Game</title>
+	<style>
+	
+	.head
+	{
+		padding-top: 2px;
+		padding-bottom: 2px;
+		background-color: #92b2e5;
+	}
+	
+	*
+	{
+		background-color: #6a9ded;
+	}
+	.copy-right
+	{
+		padding-top: 2px;
+		padding-bottom: 2px;
+		text-align: center;
+		background: #92b2e5;
+		padding: 7px 0px;
+	}
+	
+	</style>
+</head>
+<body align="center">
+	<div class="head">
+		<h1>Ping Pong Game</h1>
+	</div>
+<br><br><br>
+<canvas id="gameCanvas" width="800" height="500">
+<script>
+      var canvas;
+      var canvasContext;
+      var ballx = 50;
+      var bally = 50;
+      var ballspeedx =10;
+      var ballspeedy =4;
+      var FramePerSecond = 30;
+      var paddle1y = 250;
+      var paddle2y = 250;
+      var play1score = 0;
+      var play2score = 0;  
+      var winner = false;   
+     const winScore = 5;
+     const paddleHeight = 100;
+     const paddleThickness = 10;
+   
+
+  function calMousePos(evt){
+                var rect = canvas.getBoundingClientRect();
+                 var root = document.documentElement;   
+                  var mouseX = evt.clientX - rect.left - root.scrollLeft;
+                  var mouseY = evt.clientY - rect.top - root.scrollTop; 
+                      return {
+                       x:mouseX,
+                       y: mouseY
+};
+}
+
+ function mousehandler(evt){
+         if(winner){
+                  play1score = 0;
+                  play2score = 0;
+                  winner = false;
+       }
+
+        }
+       
+
+window.onload=function(){
+          console.log("Hello World");
+         canvas = document.getElementById('gameCanvas');
+         canvasContext = canvas.getContext('2d');
+         setInterval(function(){
+                      moveEvery();
+                      drawEvery();
+},1000/FramePerSecond);          
+
+       canvas.addEventListener('mousedown',mousehandler);
+       
+       canvas.addEventListener('mousemove',function(evt){
+                        var mousepos =  calMousePos(evt);
+                        paddle1y = mousepos.y - (paddleHeight/2);
+                        //paddle2y = mousepos.y - (paddleHeight/2)
+});
+}
+
+function ballRest(){
+           if(play1score >= winScore || play2score >= winScore )
+           { 
+               winner = true;     
+           }
+
+           ballspeedx = -ballspeedx;
+           ballx = canvas.width/2;
+           bally = canvas.height/2;
+}
+
+function computerMovement()
+{                 var paddle2yCenter = paddle2y + (paddleHeight/2);
+                   if(paddle2yCenter < bally -35)
+                   {                paddle2y += 6;
+                    }else if(paddle2yCenter > bally+35){
+                                      paddle2y -= 6;
+                    }
+}
+
+function moveEvery(){
+                 if(winner){
+                      return;
+                   }
+                 
+                   computerMovement()
+                   ballx  +=ballspeedx; 
+                   bally  +=ballspeedy;
+
+                  if(ballx  <  0 ){
+                        if(bally > paddle1y && bally < paddle1y+paddleHeight )
+                         {
+                              ballspeedx = -ballspeedx;
+                              var dely = bally 
+                           - (paddle1y + paddleHeight/2);
+                               ballspeedy = dely * 0.35;
+                         
+                            }else{
+                                  play2score++; 
+                                  ballRest();
+                             }
+                       } if(ballx > canvas.width){
+                      if(bally > paddle2y && bally < paddle2y+paddleHeight )
+                         {
+
+                           var dely = bally 
+                           - (paddle2y + paddleHeight/2);
+                               ballspeedy = dely * 0.35;
+
+                         ballspeedx = -ballspeedx;
+                            }else{
+                                 play1score++;
+                                 ballRest();
+                               
+                             }
+                 }if(bally  <  0){
+                      ballspeedy = -ballspeedy; 
+                 }if(bally > canvas.height){
+                      ballspeedy = -ballspeedy;
+}
+}
+
+
+ function drawEvery(){
+          
+         canvasContext.fillStyle = 'black';
+         canvasContext.fillRect(0,0,canvas.width,canvas.height);   
+         canvasContext.fillStyle="White";
+         canvasContext.fillRect(canvas.width/2,canvas.height/2,10,30);  
+         canvasContext.fillStyle="White";
+         canvasContext.fillRect(canvas.width/2,canvas.height/2,10,30);  
+         canvasContext.fillStyle="White";
+         canvasContext.fillRect(canvas.width/2,canvas.height/2-60,10,30);  
+         canvasContext.fillStyle="White";
+         canvasContext.fillRect(canvas.width/2,canvas.height/2-120,10,30);
+         canvasContext.fillStyle="White";
+         canvasContext.fillRect(canvas.width/2,canvas.height/2-180,10,30);
+         canvasContext.fillStyle="White";
+         canvasContext.fillRect(canvas.width/2,canvas.height/2-240,10,30);
+ 
+
+         canvasContext.fillStyle="White";
+         canvasContext.fillRect(canvas.width/2,canvas.height/2+60,10,30);  
+         canvasContext.fillStyle="White";
+         canvasContext.fillRect(canvas.width/2,canvas.height/2+120,10,30);
+         canvasContext.fillStyle="White";
+         canvasContext.fillRect(canvas.width/2,canvas.height/2+180,10,30);
+         canvasContext.fillStyle="White";
+         canvasContext.fillRect(canvas.width/2,canvas.height/2+240,10,30);
+
+            if(winner){
+                          canvasContext.fillStyle="White";
+                           if(play1score >= winScore)
+                          {
+                           canvasContext.fillText("Player 1 is Won" ,350,250);
+                           }else if(play2score >= winScore)
+                          {
+                          canvasContext.fillText("Player 2 is Won" ,350,250);
+                           }
+                          canvasContext.fillText("Click To Continue" ,350,200);
+                          return;
+                   }
+            
+        
+
+        //this line is include in first time demonstation
+        // canvasContext.fillStyle = 'red' ;
+         //canvasContext.fillRect(ballx,200,10,12);
+
+         
+
+         //this is for the left paddle
+         canvasContext.fillStyle = 'yellow';
+         canvasContext.fillRect(0,paddle1y,paddleThickness,paddleHeight);
+        
+         //this is for the right paddle
+         canvasContext.fillStyle = 'yellow';
+         canvasContext.fillRect(canvas.width-paddleThickness,paddle2y,paddleThickness,paddleHeight);
+         
+        circleColor(ballx,bally,5,'white');
+        canvasContext.fillText("Score :" +play1score ,170,80);
+        canvasContext.fillText("Score : "+play2score,canvas.width-170,80);
+       
+}
+
+function circleColor(xvalue,yvalue,radius,drawColor){
+        canvasContext.fillStyle = drawColor;
+        canvasContext.beginPath();
+        canvasContext.arc(xvalue,yvalue,radius,0,Math.PI*2, true);
+        canvasContext.fill();
+}
+
+</script>
+</canvas>
+<br><br><br>
+
+	<div class="copy-right">
+			<h3>&#169 2018 Mighty Ghost Hack | All Rights Reserved | Design by Mayur Kadam</h3>
+		</div>
+</body>
+</html>

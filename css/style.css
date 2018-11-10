@@ -122,15 +122,13 @@
     line-height: 22px;
  }
 
- 
  .java
  {
 	height: 100%;
 	text-align: right;
-	top: 0;
+	top:0;
 	padding: 1px;
 	color: white;
-	width: 85%;
  }
 
  .javascript
@@ -140,7 +138,6 @@
 	top: 0;
 	padding: 1px;
 	color: white;
-	width: 60%;
  }
  
   .python
@@ -150,7 +147,6 @@
 	top: 0;
 	padding: 1px;
 	color: white;
-	width: 75%;
  }
 
    .android
@@ -160,7 +156,6 @@
 	top: 0;
 	padding: 1px;
 	color: white;
-	width: 60%;
  }
  
   .c
@@ -170,7 +165,7 @@
 	top: 0;
 	padding: 1px;
 	color: white;
-	width: 70%;
+
  }
  
   .webdev
@@ -180,7 +175,6 @@
 	top: 0;
 	padding: 1px;
 	color: white;
-	width: 60%;
  }
  
    .gamedev
@@ -190,7 +184,6 @@
 	top: 0;
 	padding: 1px;
 	color: white;
-	width: 60%;
  }
  
     .ethical
@@ -200,7 +193,7 @@
 	top: 0;
 	padding: 1px;
 	color: white;
-	width: 70%;
+
  }
  
  
@@ -211,7 +204,7 @@
 	top: 0;
 	padding: 1px;
 	color: white;
-	width: 60%;
+
  }
  
  

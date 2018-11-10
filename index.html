@@ -15,6 +15,15 @@
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+				jQuery(document).ready(function(){
+				jQuery('.skillbar').each(function(){
+				jQuery(this).find('.skillbar-bar').animate({
+				width:jQuery(this).attr('data-percent')
+				},4000);
+				});
+				});
+	</script>
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -212,55 +221,54 @@
                     <h2>My Skills</h2>
                     <hr>
 					<div class="col-sm-6 stats_grid_right">
-						<div class="skillbar">
-							<span class="skillbar-title" style="background: #4d2600;">Java</span>
-								<p class="skillbar-bar java" style="background: #994d00;">85%</p>
+						<div class="skillbar clearfix" data-percent="85%">
+							<div class="skillbar-title" style="background: #4d2600;"><span>Java</span></div>
+								<div class="skillbar-bar java" style="background: #994d00;">85%</div>
 						</div>
 						<!-- End Skill Bar -->
 			
-						<div class="skillbar">
-							<span class="skillbar-title" style="background: #cc0066;">JavaScript</span>
-								<p class="skillbar-bar javascript" style="background: #ff1a8c;">60%</p>
+						<div class="skillbar clearfix" data-percent="60%">
+							<div class="skillbar-title" style="background: #cc0066;"><span>JavaScript</span></div>
+								<div class="skillbar-bar javascript" style="background: #ff1a8c;">60%</div>
 						</div>
+
 						
-						<div class="skillbar">
+						
+						<div class="skillbar clearfix" data-percent="75%">
 							<span class="skillbar-title" style="background: #005c99;">Python</span>
 								<p class="skillbar-bar python" style="background: #0099ff;">75%</p>
 						</div>
 						
-						<div class="skillbar">
+						<div class="skillbar clearfix" data-percent="60%">
 							<span class="skillbar-title" style="background: #2d8659;">Android</span>
 						<p class="skillbar-bar android" style="background: #40bf80;">60%</p>
 						</div>
 						<!-- End Skill Bar -->
-				</div>
+					</div>
 				
 				<div class="col-sm-6 stats_grid_right">
-						<div class="skillbar">
+						<div class="skillbar clearfix" data-percent="70%">
 							<span class="skillbar-title" style="background: #cc6600;">C</span>
 								<p class="skillbar-bar c" style="background: #ff9933;">70%</p>
 						</div>
-						<!-- End Skill Bar -->
 			
-						<div class="skillbar">
+						<div class="skillbar clearfix" data-percent="60%">
 							<span class="skillbar-title" style="background: #0086b3;">Web Dev</span>
 								<p class="skillbar-bar webdev" style="background: #4dd2ff;">60%</p>
 						</div>
 						
-						<div class="skillbar">
+						<div class="skillbar clearfix" data-percent="60%">
 							<span class="skillbar-title" style="background: #cc0000;">Game Dev</span>
 								<p class="skillbar-bar gamedev" style="background: #ff1a1a;">60%</p>
 						</div>
 						
-						<div class="skillbar">
+						<div class="skillbar clearfix" data-percent="70%">
 							<span class="skillbar-title" style="background: #009900;">Ethical-H</span>
 								<p class="skillbar-bar ethical" style="background: #4dff4d;">70%</p>
 						</div>
-						<!-- End Skill Bar -->
 				</div>	
                 </div>
             </div>			
-		</div>
 		</section>
 	
 	

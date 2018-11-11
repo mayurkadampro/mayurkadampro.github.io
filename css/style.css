@@ -278,6 +278,10 @@
      transition: all .3s ease-in-out;    
      margin-top: 15px;   
  }
+
+  .btn-outlinee:hover {    
+	background-color: #6A9DED;
+ }
  
      
  .btn-social {   

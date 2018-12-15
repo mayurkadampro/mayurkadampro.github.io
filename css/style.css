@@ -1,3 +1,11 @@
+.profile_img{
+    position:absolute;
+    top:40%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:100%;
+}
+
  .navbar {    
    background: black;  
    font-weight: 700;   
@@ -25,8 +33,10 @@
 
  header {
    background: gray;
-   background-image: url("background.jpg");
+   background:url("../images/background.jpg") no-repeat;
    color: white;
+   height:620px;
+   
  }   
  header img {    
    display: block;

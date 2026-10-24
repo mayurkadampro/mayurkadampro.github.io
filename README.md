@@ -20,3 +20,6 @@ Edit `LeetCodeShowcase` in `src/App.jsx` when you want to refresh LeetCode numbe
 - Added six verified credential URLs to the Certifications section.
 - Removed the Beyond the code card.
 - Credential cards are data-driven in `src/App.jsx`.
+
+## v1.5
+Added Financial News Portal, PyBot and Driver Drowsiness Monitoring project cards. Replaced Great UX in hero code with JavaScript, TypeScript and Python. The Show All button reveals all seven projects.

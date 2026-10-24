@@ -21,6 +21,17 @@ import {
   CheckCircle2,
   Send,
   ChevronDown,
+  Cloud,
+  BrainCircuit,
+  Network,
+  CodeXml,
+  Braces,
+  Atom,
+  Trophy,
+  Star,
+  Lightbulb,
+  Medal,
+  ShieldCheck,
 } from "lucide-react";
 
 const contact = {
@@ -115,6 +126,35 @@ const projects = [
     tags: ["REST APIs", "Amazon Textract", "Google OCR"],
     tone: "orange",
     visual: "kyc",
+  },
+  {
+    number: "05",
+    title: "Financial News Portal",
+    type: "Rupeeseed Technology Ventures · Aug 2019 – Feb 2020",
+    desc: "Developed a financial news portal that aggregates and displays articles collected from multiple platforms using Python web scraping.",
+    tags: ["Python", "JavaScript", "Web Scraping"],
+    tone: "blue",
+    visual: "news",
+  },
+  {
+    number: "06",
+    title: "PyBot — Python Query Chatbot",
+    type: "University of Mumbai · Jun 2018 – Apr 2019",
+    desc: "Built an interactive chatbot to help learners explore Python programming queries and learn concepts conversationally.",
+    tags: ["Python", "Chatbot", "Education"],
+    tone: "violet",
+    visual: "bot",
+    url: "https://github.com/abhishek305/PyBot-A-ChatBot-For-Answering-Python-Queries",
+  },
+  {
+    number: "07",
+    title: "Driver Drowsiness Monitoring",
+    type: "University of Mumbai · Feb 2018 – Apr 2018",
+    desc: "Developed a computer-vision prototype for detecting driver drowsiness to support road safety and accident prevention.",
+    tags: ["Python", "OpenCV", "Computer Vision"],
+    tone: "teal",
+    visual: "vision",
+    url: "https://github.com/mayurkadampro",
   },
 ];
 const skillGroups = [
@@ -450,8 +490,57 @@ function Certifications() {
         <div className="cert-grid">
           {certifications.map((cert, i) => (
             <article className="cert-card" key={cert.title}>
-              <div className="cert-icon">
-                <Award size={26} />
+              <div
+                className={`credential-art credential-art-${i % 6}`}
+                aria-hidden="true"
+              >
+                <span className="credential-decor" />
+                <span className="credential-shape" />
+                {cert.badgeImage ? (
+                  <img
+                    className="official-badge"
+                    src={cert.badgeImage}
+                    alt={`${cert.title} badge`}
+                    loading="lazy"
+                  />
+                ) : (
+                  <span
+                    className={`credential-feature credential-feature-${i}`}
+                  >
+                    {i === 0 ? (
+                      <>
+                        <Cloud size={64} strokeWidth={1.35} />
+                        <span className="visual-wordmark">CLOUD / DEV</span>
+                      </>
+                    ) : i === 1 ? (
+                      <>
+                        <BrainCircuit size={70} strokeWidth={1.25} />
+                        <span className="visual-wordmark">AI AGENTS</span>
+                      </>
+                    ) : i === 2 ? (
+                      <>
+                        <Network size={68} strokeWidth={1.3} />
+                        <span className="visual-wordmark">TEAMWORK</span>
+                      </>
+                    ) : i === 3 ? (
+                      <>
+                        <Braces size={70} strokeWidth={1.45} />
+                        <span className="visual-wordmark">PYTHON</span>
+                      </>
+                    ) : i === 4 ? (
+                      <>
+                        <Lightbulb size={67} strokeWidth={1.35} />
+                        <span className="visual-wordmark">ALGORITHMS</span>
+                      </>
+                    ) : (
+                      <>
+                        <Atom size={75} strokeWidth={1.3} />
+                        <span className="visual-wordmark">REACT</span>
+                      </>
+                    )}
+                  </span>
+                )}
+                <span className="credential-art-label">{cert.issuer}</span>
               </div>
               <span className="cert-number">CERTIFICATE / 0{i + 1}</span>
               <h3>{cert.title}</h3>
@@ -498,6 +587,21 @@ function ProjectArt({ visual }) {
             ))}
           </div>
         </>
+      ) : visual === "news" ? (
+        <div className="project-art-symbol">
+          <BookOpen size={76} strokeWidth={1.35} />
+          <span>FINANCIAL NEWS</span>
+        </div>
+      ) : visual === "bot" ? (
+        <div className="project-art-symbol">
+          <Code2 size={76} strokeWidth={1.35} />
+          <span>PYTHON CHATBOT</span>
+        </div>
+      ) : visual === "vision" ? (
+        <div className="project-art-symbol">
+          <Smartphone size={76} strokeWidth={1.35} />
+          <span>COMPUTER VISION</span>
+        </div>
       ) : visual === "chart" ? (
         <>
           <div className="chart-grid" />
@@ -695,13 +799,21 @@ function App() {
                   </div>
                   <div>
                     <em>08</em> &nbsp; &nbsp;{" "}
-                    <span className="green">'Great UX'</span>
+                    <span className="green">'JavaScript'</span>,
                   </div>
                   <div>
-                    <em>09</em> &nbsp; ]
+                    <em>09</em> &nbsp; &nbsp;{" "}
+                    <span className="green">'TypeScript'</span>,
                   </div>
                   <div>
-                    <em>10</em> {"}"}
+                    <em>10</em> &nbsp; &nbsp;{" "}
+                    <span className="green">'Python'</span>
+                  </div>
+                  <div>
+                    <em>11</em> &nbsp; ]
+                  </div>
+                  <div>
+                    <em>12</em> {"}"}
                   </div>
                 </div>
                 <div className="window-bottom">
@@ -829,7 +941,7 @@ function App() {
               description="A selection of products and systems I've helped develop."
             />
             <div className="projects-grid">
-              {projects.slice(0, showAll ? 4 : 3).map((p) => (
+              {projects.slice(0, showAll ? projects.length : 3).map((p) => (
                 <article className="project-card" key={p.number}>
                   <ProjectArt visual={p.visual} />
                   <div className="project-info">
@@ -845,6 +957,16 @@ function App() {
                         <span key={t}>{t}</span>
                       ))}
                     </div>
+                    {p.url && (
+                      <a
+                        className="project-link"
+                        href={p.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Explore project <ExternalLink size={14} />
+                      </a>
+                    )}
                   </div>
                 </article>
               ))}
@@ -858,10 +980,6 @@ function App() {
                 <ArrowRight size={16} />
               </button>
             </div>
-            <p className="project-note">
-              Professional project descriptions are based on resume details;
-              private client code and screenshots are not published.
-            </p>
           </div>
         </section>
         <OpenSource />
@@ -905,13 +1023,37 @@ function App() {
               title="Milestones & recognition."
             />
             <div className="award-grid">
-              {awards.map((a) => (
-                <div className="award-card" key={a.name}>
-                  <Award size={25} />
-                  <h3>{a.name}</h3>
-                  <p>{a.org}</p>
-                  <span>{a.date}</span>
-                </div>
+              {awards.map((a, i) => (
+                <article className="award-card" key={a.name}>
+                  <div
+                    className={`recognition-art recognition-art-${i}`}
+                    aria-hidden="true"
+                  >
+                    <span className="recognition-shape" />
+                    {i === 0 ? (
+                      <div className="recognition-feature hero-award">
+                        <Trophy size={70} strokeWidth={1.35} />
+                        <span>CLIENT HERO</span>
+                      </div>
+                    ) : i === 1 ? (
+                      <div className="recognition-feature star-award">
+                        <Star size={74} strokeWidth={1.25} />
+                        <span>STAR OF THE MONTH</span>
+                      </div>
+                    ) : (
+                      <div className="recognition-feature pioneer-award">
+                        <Lightbulb size={68} strokeWidth={1.35} />
+                        <span>EARLY ADOPTER</span>
+                      </div>
+                    )}
+                  </div>
+                  <div className="award-content">
+                    <span className="award-kicker">MILESTONE / 0{i + 1}</span>
+                    <h3>{a.name}</h3>
+                    <p>{a.org}</p>
+                    <span className="award-date">{a.date}</span>
+                  </div>
+                </article>
               ))}
             </div>
             <div className="extras-grid recognition-extras">
@@ -987,7 +1129,7 @@ function App() {
                   {contact.email}
                   <ArrowUpRight size={16} />
                 </a>
-                <a href={`tel:${contact.phone.replace(/\\s/g, "")}`}>
+                <a href={`tel:${contact.phone.replace(/\s/g, "")}`}>
                   <Phone size={18} />
                   {contact.phone}
                   <ArrowUpRight size={16} />

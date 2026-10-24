@@ -1469,3 +1469,444 @@ h4 {
 .recognition-extras .extra-panel {
   max-width: 100%;
 }
+
+/* v1.5: additional portfolio project visuals */
+.project-art.news {
+  background: radial-gradient(circle at 50% 40%, #286a9b, #10273c 72%);
+}
+.project-art.bot {
+  background: radial-gradient(circle at 50% 40%, #6442a0, #211c42 72%);
+}
+.project-art.vision {
+  background: radial-gradient(circle at 50% 40%, #227b75, #0d2c33 72%);
+}
+.project-art-symbol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  color: #dce9ff;
+  letter-spacing: 2px;
+  font-size: 11px;
+  font-weight: 700;
+  opacity: 0.95;
+}
+.project-art-symbol svg {
+  filter: drop-shadow(0 8px 20px #0007);
+}
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 18px;
+  color: #a6b6ff;
+  font-size: 12px;
+  font-weight: 700;
+}
+.project-link:hover {
+  color: #fff;
+}
+
+/* v1.6 — Visual artwork for recognition and certifications */
+.award-card {
+  padding: 0;
+  overflow: hidden;
+  transition:
+    transform 0.25s,
+    border-color 0.25s;
+}
+.award-card:hover,
+.cert-card:hover {
+  transform: translateY(-5px);
+  border-color: #6871d4;
+}
+.award-content {
+  padding: 23px 25px 25px;
+}
+.award-content h3 {
+  margin: 10px 0 8px;
+}
+.award-content p {
+  margin: 0 0 16px;
+}
+.award-kicker {
+  font-size: 10px;
+  letter-spacing: 1.8px;
+  color: #9cafff;
+  font-weight: 700;
+}
+.award-date {
+  display: inline-flex;
+  color: #b7c4e0;
+  font-size: 12px;
+  border: 1px solid #36465e;
+  border-radius: 99px;
+  padding: 7px 11px;
+}
+.recognition-art,
+.credential-art {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+.recognition-art {
+  height: 165px;
+  background: radial-gradient(circle at 50% 75%, #4355a4, #171f45 60%, #0d172d);
+}
+.recognition-art-1 {
+  background: radial-gradient(circle at 50% 70%, #69469a, #292044 60%, #15152b);
+}
+.recognition-art-2 {
+  background: radial-gradient(circle at 50% 70%, #2c807c, #173e47 60%, #10252e);
+}
+.art-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.24;
+  background-image:
+    linear-gradient(#ffffff20 1px, transparent 1px),
+    linear-gradient(90deg, #ffffff20 1px, transparent 1px);
+  background-size: 29px 29px;
+  transform: perspective(150px) rotateX(20deg) scale(1.25);
+}
+.recognition-glow,
+.credential-halo {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid #ffffff45;
+  box-shadow:
+    0 0 0 18px #ffffff08,
+    0 0 0 38px #ffffff05;
+}
+.recognition-medal {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 96px;
+  height: 96px;
+  border-radius: 26px;
+  transform: rotate(-10deg);
+  color: #f3e4ad;
+  background: linear-gradient(135deg, #ffffff30, #ffffff08);
+  border: 1px solid #ffffff6b;
+  box-shadow:
+    0 15px 40px #0007,
+    0 0 30px #a3b0ff3d;
+}
+.recognition-medal svg {
+  transform: rotate(10deg);
+}
+.recognition-stars {
+  position: absolute;
+  bottom: 13px;
+  color: #d7d9ff;
+  font-size: 13px;
+  letter-spacing: 8px;
+}
+.cert-card {
+  padding: 0;
+  overflow: hidden;
+  transition:
+    transform 0.25s,
+    border-color 0.25s;
+}
+.credential-art {
+  height: 142px;
+  margin-bottom: 22px;
+  background: linear-gradient(135deg, #172e53, #192148);
+}
+.credential-art-1 {
+  background: linear-gradient(135deg, #153b46, #1c3152);
+}
+.credential-art-2 {
+  background: linear-gradient(135deg, #392650, #24254a);
+}
+.credential-art-3 {
+  background: linear-gradient(135deg, #1b4350, #152d47);
+}
+.credential-art-4 {
+  background: linear-gradient(135deg, #433452, #252044);
+}
+.credential-art-5 {
+  background: linear-gradient(135deg, #233e5a, #152b47);
+}
+.credential-halo {
+  width: 116px;
+  height: 116px;
+}
+.credential-emblem {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 77px;
+  height: 77px;
+  border-radius: 22px;
+  background: #ffffff18;
+  border: 1px solid #ffffff70;
+  color: #d4dfff;
+  box-shadow: 0 14px 35px #0006;
+  transform: rotate(-8deg);
+}
+.credential-emblem svg {
+  transform: rotate(8deg);
+}
+.credential-art-label {
+  position: absolute;
+  left: 17px;
+  bottom: 10px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #d9e7ffb5;
+  font-weight: 700;
+}
+.cert-card > .cert-number,
+.cert-card > h3,
+.cert-card > p,
+.cert-card > .cert-bottom {
+  margin-left: 23px;
+  margin-right: 23px;
+}
+.cert-card > .cert-bottom {
+  margin-bottom: 23px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .award-card,
+  .cert-card {
+    transition: none;
+  }
+}
+
+/* v1.7 — unique credential artwork, no repeated generic award icons */
+.credential-art {
+  height: 170px;
+  isolation: isolate;
+}
+.credential-art-0 {
+  background:
+    radial-gradient(circle at 65% 30%, #ffb86633, transparent 45%),
+    linear-gradient(130deg, #302219, #171b32 70%);
+}
+.credential-art-1 {
+  background:
+    radial-gradient(circle at 70% 30%, #73c5ff3a, transparent 48%),
+    linear-gradient(135deg, #152b52, #221b46);
+}
+.credential-art-2 {
+  background: linear-gradient(145deg, #09375c, #122047 70%);
+}
+.credential-art-3 {
+  background: linear-gradient(140deg, #243f64, #1b3444 65%, #3b3621);
+}
+.credential-art-4 {
+  background: linear-gradient(135deg, #443056, #211d3c 65%, #312044);
+}
+.credential-art-5 {
+  background:
+    radial-gradient(circle at 55% 42%, #70efff30, transparent 48%),
+    linear-gradient(135deg, #142c4b, #18223e);
+}
+.credential-decor {
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  border: 1px solid #ffffff24;
+  border-radius: 50%;
+  top: -110px;
+  right: -65px;
+  box-shadow:
+    0 0 0 34px #ffffff06,
+    0 0 0 75px #ffffff04;
+}
+.credential-shape {
+  position: absolute;
+  left: -45px;
+  bottom: -90px;
+  width: 185px;
+  height: 185px;
+  border: 1px solid #ffffff18;
+  transform: rotate(32deg);
+  border-radius: 34px;
+}
+.credential-feature {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  filter: drop-shadow(0 10px 25px #0007);
+}
+.credential-feature-0 {
+  color: #ffc078;
+  transform: translateY(-4px);
+}
+.credential-feature-1 {
+  color: #9fc9ff;
+  transform: rotate(-8deg);
+}
+.credential-feature-2 {
+  color: #63b5ff;
+  transform: rotate(7deg);
+}
+.credential-feature-3 {
+  color: #ffdf7e;
+  transform: rotate(-6deg);
+}
+.credential-feature-4 {
+  color: #e6b2ff;
+  transform: rotate(5deg);
+}
+.credential-feature-5 {
+  color: #85e9ff;
+  transform: rotate(-8deg);
+}
+.visual-wordmark {
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 2.6px;
+  color: #fff;
+  opacity: 0.86;
+}
+.credential-art-label {
+  z-index: 2;
+  bottom: 12px;
+}
+.official-badge {
+  position: relative;
+  z-index: 3;
+  max-height: 136px;
+  max-width: 75%;
+  object-fit: contain;
+  background: #f9fafc;
+  border-radius: 12px;
+  padding: 8px;
+  box-shadow: 0 10px 32px #0006;
+}
+/* Awards use three different symbols and layouts, not one medal with color swaps. */
+.recognition-art {
+  height: 178px;
+  background:
+    radial-gradient(circle at 30% 30%, #4e77ce66, transparent 45%),
+    linear-gradient(125deg, #102a4e, #11182e);
+}
+.recognition-art-1 {
+  background:
+    radial-gradient(circle at 70% 40%, #ffd37844, transparent 48%),
+    linear-gradient(130deg, #372541, #1a1831);
+}
+.recognition-art-2 {
+  background:
+    radial-gradient(circle at 35% 35%, #4bf0c044, transparent 48%),
+    linear-gradient(130deg, #143d40, #112331);
+}
+.recognition-shape {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  right: -30px;
+  top: -80px;
+  border: 1px solid #ffffff25;
+  transform: rotate(24deg);
+  border-radius: 35px;
+  box-shadow: 0 0 0 30px #ffffff06;
+}
+.recognition-feature {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  font-weight: 800;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #d5e8ff;
+  text-shadow: 0 4px 12px #0008;
+}
+.hero-award {
+  color: #a6c7ff;
+  transform: translate(-18px, 3px);
+}
+.star-award {
+  color: #ffd48d;
+  transform: translate(16px, 2px);
+}
+.pioneer-award {
+  color: #89f2d3;
+  transform: translate(-8px, 3px);
+}
+
+/* v1.8 — upright artwork with consistent central alignment */
+.credential-art,
+.recognition-art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.credential-feature,
+.recognition-feature {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  text-align: center;
+  transform: none !important;
+  rotate: 0deg !important;
+  filter: none;
+}
+.credential-feature svg,
+.recognition-feature svg {
+  display: block;
+  flex-shrink: 0;
+  transform: none !important;
+  rotate: 0deg !important;
+}
+.credential-feature-0,
+.credential-feature-1,
+.credential-feature-2,
+.credential-feature-3,
+.credential-feature-4,
+.credential-feature-5,
+.hero-award,
+.star-award,
+.pioneer-award {
+  transform: none !important;
+  rotate: 0deg !important;
+}
+.visual-wordmark {
+  display: block;
+  transform: none !important;
+  rotate: 0deg !important;
+  text-align: center;
+}
+.credential-shape,
+.recognition-shape {
+  display: none;
+}
+.credential-decor {
+  opacity: 0.35;
+  pointer-events: none;
+}
+.credential-art-label {
+  position: absolute;
+  left: 16px;
+  bottom: 12px;
+  z-index: 3;
+}
+/* Keep project illustrations upright as well. */
+.phone-mock,
+.id-card {
+  transform: none !important;
+}

@@ -43,50 +43,198 @@ const contact = {
 const experience = [
   {
     company: "EPAM Systems",
-    role: "Software Engineer",
-    specialty: "Frontend Developer · ReactJS & React Native",
-    dates: "Jan 2025 — Present",
+    companyUrl: "https://www.epam.com/",
+    role: "Engineer on ALIB-BBAP",
+    projectUrl: "https://telescope.epam.com/projects/profile/name/ALIB-BBAP",
+    specialty: "React Native · Business Banking Mobile App",
+    dates: "Feb 2025 — Present",
     location: "Pune, India",
-    points: [
-      "Integrated local admin functionality and statement features, improving mobile app usability by 20%.",
-      "Refined the Quick Payment template for maintainability and component reuse.",
-      "Integrated Firebase Analytics for real-time user interaction tracking.",
-      "Used Copilot AI Agent to review code changes against Jira requirements.",
+    client: "Allied Irish Banks",
+    projects: [
+      {
+        name: "AIB Business Banking Mobile App",
+        description:
+          "Cross-platform mobile banking application aligned with AIB’s digital banking strategy.",
+      },
     ],
+    points: [
+      "Designed, developed and tested iOS and Android applications using React Native.",
+      "Translated API specifications into mobile interfaces and integrated banking workflows.",
+      "Conducted peer code reviews and unit tests to support reliable delivery.",
+      "Applied mobile design patterns and collaborated with cross-functional Agile teams.",
+    ],
+    tools: [
+      "React Native",
+      "Firebase",
+      "RTK Query",
+      "VS Code",
+      "ESLint",
+      "Bitbucket",
+      "JIRA",
+    ],
+    team: "5 frontend · 1 backend · 3 QA",
   },
   {
     company: "Tata Consultancy Services",
-    role: "Systems Engineer",
-    specialty: "Frontend Developer · ReactJS & React Native",
+    companyUrl: "https://www.tcs.com/",
+    role: "System Engineer",
+    specialty: "React Native · ReactJS · ServiceNow",
     dates: "Mar 2022 — Nov 2024",
     location: "Pune, India",
-    points: [
-      "Increased user engagement by 30% with offline downloads and live streaming features.",
-      "Deployed mobile applications to the App Store and Play Store, expanding reach by 30%.",
-      "Built reusable design systems and component libraries.",
+    assignments: [
+      {
+        role: "System Engineer",
+        dates: "Feb 2024 — Nov 2024",
+        client: "Thomson Reuters, Cerifi",
+        name: "CLE Edge Mobile Application",
+        description:
+          "Professional learning platform offering courses, webinars, certifications, progress tracking and online/offline access.",
+        points: [
+          "Built mobile features for offline downloads, live streaming, on-demand content and data synchronization.",
+          "Replicated web portal features in mobile and estimated user stories.",
+          "Developed React components with hooks and Redux; performed code reviews and unit tests with Enzyme and Jest.",
+        ],
+        tools: [
+          "ReactJS",
+          "React Native",
+          "Redux",
+          "ServiceNow",
+          "HTML",
+          "CSS",
+          "Java",
+          "Jest",
+          "Enzyme",
+          "Git",
+          "Bitbucket",
+          "JIRA",
+        ],
+        team: "4 frontend · 5 backend · 3 QA",
+      },
+      {
+        role: "System Engineer",
+        dates: "Mar 2022 — Jan 2024",
+        client: "Lumen Technologies",
+        name: "Ticketing Platform",
+        description:
+          "Web ticketing platform with application enhancements and ServiceNow integrations.",
+        points: [
+          "Enhanced web application features and implemented offline download functionality.",
+          "Designed React modules using hooks and Redux; estimated user stories and reviewed code.",
+          "Provided production support, knowledge transfer and ServiceNow catalog integration through REST APIs.",
+        ],
+        tools: [
+          "ReactJS",
+          "Vue.js",
+          "ServiceNow",
+          "Redux",
+          "HTML",
+          "CSS",
+          "Java",
+          "Jest",
+          "Enzyme",
+          "Git",
+          "Bitbucket",
+          "JIRA",
+        ],
+        team: "5 frontend · 3 backend · 2 QA",
+      },
     ],
   },
   {
     company: "Qodequay Technologies Pvt. Ltd.",
+    companyUrl: "https://www.qodequay.com/",
     role: "Software Developer",
-    specialty: "Frontend Developer · ReactJS & React Native",
+    specialty: "React Native · Angular · Streaming",
     dates: "Apr 2021 — Mar 2022",
     location: "Pune, India",
-    points: [
-      "Developed a live-streaming platform with Wowza Streaming Engine.",
-      "Provided production support and deployed projects on AWS EC2.",
+    client: "OneDash, Clarion Technologies",
+    projects: [
+      {
+        name: "OneDash Live Mobile Application",
+        description:
+          "Interactive livestreaming and distribution platform supporting content monetization across channels.",
+      },
     ],
+    points: [
+      "Developed a client-server livestreaming platform with React Native, Angular and Wowza Streaming Engine.",
+      "Implemented RTMP streaming and HLS-based client playback.",
+      "Provided production support and deployed services to AWS EC2.",
+    ],
+    tools: [
+      "ReactJS",
+      "React Native",
+      "Angular",
+      "Redux",
+      "HTML",
+      "CSS",
+      "Java",
+      "Bitbucket",
+      "JIRA",
+      "TeamCity",
+      "AWS",
+    ],
+    team: "1 frontend · 2 backend · 2 QA",
   },
   {
-    company: "Rupeeseed Technology Ventures Pvt. Ltd.",
-    role: "Software Developer",
-    specialty: "Full Stack Developer · Angular / Python",
+    company: "Rupeeseed Technology Ventures Pvt Ltd",
+    companyUrl: "https://www.rupeeseed.com/",
+    role: "Software Developer / Software Developer Trainee",
+    specialty: "Angular · Python · Financial Technology",
     dates: "Jun 2019 — Mar 2021",
     location: "Mumbai, India",
-    points: [
-      "Developed a Flask web application.",
-      "Integrated REST APIs and GraphQL endpoints for a single-page application.",
-      "Built a stock listing portal for backtesting reports.",
+    assignments: [
+      {
+        role: "Software Developer",
+        dates: "Nov 2019 — Mar 2021",
+        client: "In-house",
+        name: "Hawk News & StradEasy",
+        description:
+          "Hawk News is a financial news and market-analysis portal. StradEasy is a historical-data strategy backtesting platform.",
+        points: [
+          "Created reusable UI components and an Angular news dashboard aggregating financial articles.",
+          "Built stock listings, backtesting reports and user-defined strategy alerts.",
+          "Used Backtrader and Pandas to analyze historical market data and trading strategies.",
+        ],
+        tools: [
+          "Angular",
+          "HTML",
+          "CSS",
+          "Java",
+          "Python",
+          "Pandas",
+          "Backtrader",
+          "Bitbucket",
+          "JIRA",
+          "TeamCity",
+          "AWS",
+        ],
+        team: "2 frontend · 2 backend · 2 QA",
+      },
+      {
+        role: "Software Developer Trainee",
+        dates: "Jun 2019 — Nov 2019",
+        client: "Tata Capital",
+        name: "KYC Verification Service",
+        description:
+          "Document text extraction and identity-verification services using OCR technologies.",
+        points: [
+          "Built a Flask web application and Django REST APIs.",
+          "Integrated Google OCR and Amazon Textract for document data extraction and verification.",
+        ],
+        tools: [
+          "Python",
+          "Flask",
+          "Django",
+          "HTML",
+          "CSS",
+          "Google OCR",
+          "Amazon Textract",
+          "OpenCV",
+          "AWS",
+          "JIRA",
+        ],
+        team: "2 backend · 2 QA",
+      },
     ],
   },
 ];
@@ -810,16 +958,17 @@ function App() {
                     <span className="green">'Python'</span>
                   </div>
                   <div>
+                    <em>10</em> &nbsp; &nbsp;{" "}
+                    <span className="green">'AWS Cloud'</span>
+                  </div>
+                  <div>
                     <em>11</em> &nbsp; ]
                   </div>
                   <div>
                     <em>12</em> {"}"}
                   </div>
                 </div>
-                <div className="window-bottom">
-                  <span className="green">●</span> Available for collaboration{" "}
-                  <span>TSX</span>
-                </div>
+                
               </div>
               <div className="floating-chip">
                 <Smartphone size={19} />
@@ -987,31 +1136,121 @@ function App() {
           <div className="container">
             <SectionHead
               eyebrow="04 / CAREER"
-              title="The journey so far."
-              description="Building, learning and delivering across teams and industries."
+              title="Experience that drives impact."
+              description="A clear view of the teams, products, and technologies I've worked with."
             />
-            <div className="timeline">
+            <div className="career-list">
               {experience.map((job, i) => (
-                <article className="timeline-item" key={job.company}>
-                  <div className="timeline-date">
-                    {job.dates}
+                <div className="career-row" key={job.company}>
+                  <div className="career-timestamp">
+                    <strong>{job.dates}</strong>
                     <span>
-                      <MapPin size={13} /> {job.location}
+                      <MapPin size={12} /> {job.location}
                     </span>
                   </div>
-                  <div className="timeline-dot" />
-                  <div className="timeline-body">
-                    <div className="job-index">0{i + 1} / EXPERIENCE</div>
-                    <h3>{job.role}</h3>
-                    <h4>{job.company}</h4>
-                    <p className="job-specialty">{job.specialty}</p>
-                    <ul>
-                      {job.points.map((point) => (
-                        <li key={point}>{point}</li>
+                  <article className="career-card">
+                    <div className="career-header">
+                      <div className="career-number">
+                        {String(i + 1).padStart(2, "0")}
+                      </div>
+                      <div className="career-heading">
+                        <a
+                          href={job.companyUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="career-company"
+                        >
+                          {job.company} <ExternalLink size={14} />
+                        </a>
+                        <h3>{job.role}</h3>
+                        <p>{job.specialty}</p>
+                      </div>
+                      <div className="career-period">
+                        <span>{job.dates}</span>
+                        <small>
+                          <MapPin size={12} /> {job.location}
+                        </small>
+                      </div>
+                    </div>
+                    <div className="career-projects">
+                      {(
+                        job.assignments || [
+                          {
+                            role: job.role,
+                            dates: job.dates,
+                            client: job.client,
+                            name: job.projects?.[0]?.name,
+                            description: job.projects?.[0]?.description,
+                            points: job.points,
+                            tools: job.tools,
+                            team: job.team,
+                          },
+                        ]
+                      ).map((assignment, j) => (
+                        <div className="career-project" key={j}>
+                          <div className="career-project-top">
+                            <div>
+                              <div className="career-project-label">
+                                PROJECT {String(j + 1).padStart(2, "0")}
+                                {job.assignments && (
+                                  <span> · {assignment.dates}</span>
+                                )}
+                              </div>
+                              <h4>{assignment.name}</h4>
+                              {assignment.client && (
+                                <p className="career-client">
+                                  Client: {assignment.client}
+                                </p>
+                              )}
+                            </div>
+                          </div>
+                          <p className="career-project-description">
+                            {assignment.description}
+                          </p>
+                          <div className="career-tech">
+                            {assignment.tools.slice(0, 6).map((t) => (
+                              <span key={t}>{t}</span>
+                            ))}
+                            {assignment.tools.length > 6 && (
+                              <span>+{assignment.tools.length - 6} more</span>
+                            )}
+                          </div>
+                          <details className="career-details">
+                            <summary>
+                              View responsibilities & full tech stack{" "}
+                              <span className="career-expand">+</span>
+                            </summary>
+                            <div className="career-details-content">
+                              <ul>
+                                {assignment.points.map((point) => (
+                                  <li key={point}>{point}</li>
+                                ))}
+                              </ul>
+                              <p>
+                                <strong>Technologies:</strong>{" "}
+                                {assignment.tools.join(" · ")}
+                              </p>
+                              {assignment.team && (
+                                <p>
+                                  <strong>Team:</strong> {assignment.team}
+                                </p>
+                              )}
+                              {job.projectUrl && (
+                                <a
+                                  href={job.projectUrl}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  Project profile <ExternalLink size={13} />
+                                </a>
+                              )}
+                            </div>
+                          </details>
+                        </div>
                       ))}
-                    </ul>
-                  </div>
-                </article>
+                    </div>
+                  </article>
+                </div>
               ))}
             </div>
           </div>
@@ -1180,10 +1419,6 @@ function App() {
               <p className="form-status" role="status">
                 {status}
               </p>
-              <small>
-                This opens your email application; no message is sent
-                automatically.
-              </small>
             </form>
           </div>
         </section>
